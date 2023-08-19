@@ -67,6 +67,8 @@ body {
 .navmenu-container {
   @include flexCenter();
   width: 100%;
+  flex-direction: column;
+  gap: 16px;
   .navmenu {
     @include flexCenter();
     background: linear-gradient(to right, rgb(1, 8, 19), rgb(10, 44, 82));
@@ -97,6 +99,75 @@ body {
     .nav-item-dropdown {
       height: 8px;
       width: 12px;
+    }
+  }
+
+  .childmenu {
+    @include flexCenter();
+    flex-direction: column;
+    width: 600px;;
+    background: linear-gradient(to right, #2b424a, #797468);
+    border-radius: 12px;
+    padding: 28px;
+    gap: 28px;
+    .childmenu-headings {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #283c3e;
+      width: 100%;
+      padding: 8px 16px;
+      border-radius: 8px;
+      h5 {
+        color: white;
+        margin: 0px;
+      }
+    }
+
+    .childmenu-items {
+      &.platforms {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 0px 16px;
+        .item {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 30%;
+          gap: 12px;
+          img {
+            height: 28px;
+            width: 28px;
+          }
+          span {
+            color: white;
+          }
+        }
+      }
+      &.prepaid-cards {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 0px 24px;
+        .item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 30%;
+          gap: 12px;
+          img {
+            height: 28px;
+            width: auto;
+          }
+          span {
+            color: white;
+          }
+        }
+      }
     }
   }
 }

@@ -9,6 +9,9 @@ for (let btn of navMenuButtons) {
     btn?.addEventListener("click", () => {
         console.log('clicked')
     })
+    btn?.addEventListener("mouseenter", () => {
+        console.log('mouse enter')
+    })
 }
 
 // document.querySelector('#app').innerHTML = `
