@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+@mixin flexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  background-image: url('./images/they-are-playing-video-game-with-pair-virtual-glasses-generative-ai.avif');
+  min-height: 120vh;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  padding: 16px 32px;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+
+  .items-container-right {
+    @include flexCenter();
+    gap: 24px;
+    height: 100%;
+    width: auto;
+  }
+
+  .nav-icon {
+    height: 36px;
+    width: 36px;
+  }
+
+  .nav-round-icon-container {
+    @include flexCenter();
+    border-radius: 8px;
+    height: 44px;
+    width: 44px;
+    background-color: #021e45;
+  }
+
+  .nav-icon-round {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.links-container {
+  @include flexCenter();
+  width: 100%;
+  ul {
+    display: flex;
+    gap: 28px;
+  }
+  li {
+    color:rgb(227, 239, 239);
+    list-style-type: none;
+  }
+}
+
+/* Define a custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+  border: none; /* Remove the border */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 3px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+}
