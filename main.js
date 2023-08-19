@@ -3,6 +3,14 @@ import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 
+const navMenuButtons = document.getElementsByClassName('navmenu-btn')
+
+for (let btn of navMenuButtons) {
+    btn?.addEventListener("click", () => {
+        console.log('clicked')
+    })
+}
+
 // document.querySelector('#app').innerHTML = `
 //   <div>
 //     <a href="https://vitejs.dev" target="_blank">

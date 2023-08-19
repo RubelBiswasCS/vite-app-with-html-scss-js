@@ -64,24 +64,39 @@ body {
   }
 }
 
-/* Define a custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px; /* Width of the scrollbar */
-}
+.navmenu-container {
+  @include flexCenter();
+  width: 100%;
+  .navmenu {
+    @include flexCenter();
+    background: linear-gradient(to right, rgb(1, 8, 19), rgb(10, 44, 82));
+    min-width: 280px;
+    width: auto;
+    min-height: 80px;
+    border-radius: 16px;
+    gap: 64px;
+    padding: 0px 24px;
+  }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color of the track */
-  border: none; /* Remove the border */
-}
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; /* Color of the scrollbar handle */
-  border-radius: 3px; /* Rounded corners */
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Darker color on hover */
+  .navmenu-item {
+    @include flexCenter();
+    gap: 8px;
+    p {
+      color: white;
+    }
+    .nav-item-icon-image {
+      height: 28px;
+      width: 28px;
+    }
+    .nav-item-dropdown {
+      height: 8px;
+      width: 12px;
+    }
+  }
 }
