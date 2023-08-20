@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 
 const navMenuButtons = document.getElementsByClassName('navmenu-btn')
+const searchButton = document.getElementById('search-btn')
+const searchCloseButton = document.getElementById('close-search-btn')
 
 for (let btn of navMenuButtons) {
     btn?.addEventListener("click", () => {
@@ -13,6 +15,18 @@ for (let btn of navMenuButtons) {
         console.log('mouse enter')
     })
 }
+
+// On Seach Button Click
+searchButton.addEventListener('click', () => {
+    document.getElementById('navmenu').classList.add('search-mode')
+    document.getElementById('search-container').classList.add('search-mode')
+}) 
+
+// On Search Close Button Click
+searchCloseButton.addEventListener('click', () => {
+    document.getElementById('navmenu').classList.remove('search-mode')
+    document.getElementById('search-container').classList.remove('search-mode')
+}) 
 
 // document.querySelector('#app').innerHTML = `
 //   <div>
