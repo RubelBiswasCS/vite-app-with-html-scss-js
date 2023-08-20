@@ -6,13 +6,22 @@ import { setupCounter } from './counter.js'
 const navMenuButtons = document.getElementsByClassName('navmenu-btn')
 const searchButton = document.getElementById('search-btn')
 const searchCloseButton = document.getElementById('close-search-btn')
+const childMenu = document.getElementById('childmenu')
+
+const handleToggleChildMenu = () => {
+    if (childMenu.classList.contains('hide')) {
+        childMenu.classList.remove('hide')
+    } else {
+        childMenu.classList.add('hide')
+    }
+}
 
 for (let btn of navMenuButtons) {
     btn?.addEventListener("click", () => {
-        console.log('clicked')
+        handleToggleChildMenu()
     })
     btn?.addEventListener("mouseenter", () => {
-        console.log('mouse enter')
+        handleToggleChildMenu()
     })
 }
 
@@ -27,6 +36,7 @@ searchCloseButton.addEventListener('click', () => {
     document.getElementById('navmenu').classList.remove('search-mode')
     document.getElementById('search-container').classList.remove('search-mode')
 }) 
+
 
 // document.querySelector('#app').innerHTML = `
 //   <div>

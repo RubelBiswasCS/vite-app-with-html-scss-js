@@ -69,6 +69,7 @@ body {
   width: 100%;
   flex-direction: column;
   gap: 16px;
+  position: relative;
   .navmenu {
     @include flexCenter();
     justify-content: flex-start;
@@ -123,6 +124,8 @@ body {
   }
 
   .childmenu {
+    position: absolute;
+    top: 80px;
     @include flexCenter();
     flex-direction: column;
     width: 600px;;
@@ -130,6 +133,7 @@ body {
     border-radius: 12px;
     padding: 28px;
     gap: 28px;
+    z-index: 100;
 
     .childmenu-headings {
       display: flex;
@@ -313,4 +317,12 @@ body {
       
     }
   }
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  visibility: hidden;
 }
