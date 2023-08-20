@@ -21,7 +21,7 @@ for (let btn of navMenuButtons) {
         handleToggleChildMenu()
     })
     btn?.addEventListener("mouseenter", () => {
-        handleToggleChildMenu()
+        childMenu.classList.remove('hide')
     })
 }
 
