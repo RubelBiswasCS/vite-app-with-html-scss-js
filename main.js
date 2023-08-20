@@ -29,6 +29,7 @@ for (let btn of navMenuButtons) {
 searchButton.addEventListener('click', () => {
     document.getElementById('navmenu').classList.add('search-mode')
     document.getElementById('search-container').classList.add('search-mode')
+    childMenu.classList.add('hide')
 }) 
 
 // On Search Close Button Click
