@@ -228,25 +228,24 @@ body {
       }
     }
 
-      span {
-        color: white;
-        font-size: 12px;
-      }
+    span {
+      color: white;
+      font-size: 12px;
+    }
 
-      button {
-        @include flexCenter();
-        &.close {
-          position: absolute;
-          right: -48px;
-          color: white;
-          font-size: 48px;
-          img {
-            width: 20px;
-            height: 20px;
-          }
+    button {
+      @include flexCenter();
+      &.close {
+        position: absolute;
+        right: -48px;
+        color: white;
+        font-size: 48px;
+        img {
+          width: 20px;
+          height: 20px;
         }
-        
-      }
+      } 
+    }
   }
 
   .feature {
@@ -374,4 +373,171 @@ body {
 
 .hide {
   visibility: hidden;
+}
+
+@media (max-width: 1280px) {
+  .navmenu-container {
+    .feature, .trends {
+      padding: 0px 100px;
+      margin: 40px 0px 30px 0px;
+      .content {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .links-container {
+    & ul {
+      margin-top: 100px;
+    }
+  }
+
+  .navmenu-item {
+    p {
+      display: none;
+    }
+  }
+
+  .navmenu-container {
+    .navmenu, .search-container, .childmenu {
+      width: 420px;
+    }
+
+    .feature, .trends {
+      padding: 0px 100px;
+      margin: 40px 0px 30px 0px;
+      .content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .links-container {
+    display: none;
+    & ul {
+      margin-top: 100px;
+      @include flexCenter();
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0
+    }
+  }
+
+  .navmenu-container {
+    padding-top: 100px;
+  }
+
+  .navmenu-item {
+    p {
+      display: none;
+    }
+  }
+
+  .navmenu-container {
+    .navmenu, .search-container, .childmenu {
+      width: 350px;
+      padding: 12px;
+      min-height: 40px;
+      .nav-item-icon-image {
+        height: 14px;
+        width: 14px;
+      }
+      button {
+        &.search {
+          position: absolute;
+          right: 0px;
+          height: 30px;
+          width: 30px;
+          padding: 12px;
+          img {
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+    }
+
+    .childmenu {
+      position: absolute;
+      top: 180px;
+    }
+  
+    .search {
+      position: relative;
+      height: 30px;
+      width: 300px;
+      padding: 2px 12px;
+      border-radius: 4% 4% 4% 4% / 50% 50% 50% 50%;
+      background: linear-gradient(to right, #fd7106, #fd441b);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      input {
+        height: 100%;
+        width: 70%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        &::placeholder {
+          color: white;
+          font-size: 12px;
+        }
+      }
+  
+      span {
+        color: white;
+        font-size: 10px;
+        width: 30%;
+      }
+  
+      button {
+        @include flexCenter();
+        &.close {
+          position: absolute;
+          right: -48px;
+          color: white;
+          font-size: 48px;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        } 
+      }
+    }
+    
+    .feature, .trends {
+      padding: 0px 40px;
+      margin: 20px 0px 20px 0px;
+      width: 300px;
+      .content {
+        width: 100%;
+        h1 {
+          font-size: 24px;
+        }
+      }
+
+      .headings {
+        align-items: center;
+        button {
+          padding: 4px 8px;
+        }
+      }
+
+      .trends {
+        padding: 20px;
+      }
+      .cards {
+        flex-direction: column;
+        align-items: center;
+        .card {
+          width: 90%;
+        }
+      }
+    }
+  }
 }
