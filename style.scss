@@ -249,6 +249,55 @@ body {
       }
   }
 
+  .feature {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 200px;
+    gap: 8px;
+    margin: 120px 0px 140px 0px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      padding: 0;
+      span {
+        &.countdown {
+          color: white;
+          background-color: rgb(222, 230, 230, .1);;
+          width: fit-content;
+          padding: 8px 16px;
+        }
+      }
+
+      h1 {
+        color: white;
+      }
+
+      .pricing {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        span {
+          &.price{
+            color: white;
+            font-size: 32px;
+          }
+        }
+      }
+
+      .discount {
+        background-color: rgb(248, 113, 2);
+        padding: 6px 12px;
+        color: white;
+        font-size: 12px;
+        border-radius: 4px;
+        clip-path: polygon(83% 0, 90% 28%, 100% 73%, 99% 100%, 0 100%, 0 0);
+      }
+    }
+  }
+
   .trends {
     display: flex;
     flex-direction: column;
